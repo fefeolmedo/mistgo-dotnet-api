@@ -30,8 +30,13 @@ builder.Services.AddCors(options =>
 // Add PostgreSQL Database Context
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
+    // Try multiple ways to get the connection string
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
+        ?? Environment.GetEnvironmentVariable("DATABASE_URL")
+        ?? Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")
         ?? "Host=postgres;Database=mistgo;Username=mistgouser;Password=mistgopass";
+    
+    Console.WriteLine($"Using connection string: {connectionString.Substring(0, Math.Min(50, connectionString.Length))}...");
     options.UseNpgsql(connectionString);
 });
 
