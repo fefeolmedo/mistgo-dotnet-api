@@ -7,6 +7,10 @@ using MistGoApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure Kestrel to listen on port from environment or default
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.UseUrls($"http://+:{port}");
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
@@ -68,11 +72,15 @@ using (var scope = app.Services.CreateScope())
         // Wait a bit for PostgreSQL to be fully ready
         Thread.Sleep(2000);
         
-        // Drop existing database and recreate (for development)
-        dbContext.Database.EnsureDeleted();
-        Console.WriteLine("Old database deleted (if existed)");
+        // Only drop and recreate in development environment
+        if (app.Environment.IsDevelopment())
+        {
+            // Drop existing database and recreate (for development)
+            dbContext.Database.EnsureDeleted();
+            Console.WriteLine("Old database deleted (if existed)");
+        }
         
-        // Create database and all tables
+        // Create database and all tables if they don't exist
         var created = dbContext.Database.EnsureCreated();
         Console.WriteLine($"Database created: {created}");
         
