@@ -1,0 +1,6 @@
+<step title="Incoming Request" date="2025-09-16T13:22:45.858" instance="e63a90" url="/api/deployments/2b5c8ea5b3e6e75c230384ee21c87c0379ec558c1758028963220" method="PUT" type="request" pid="770,1,7" Host="mistgo-dotnet-api.scm.azurewebsites.net" User-Agent="GITHUBACTIONS_DeployWebAppToAzure_1fd7cae4a9f9e2ffe17b9dbe0b2025c5efb6ece708d4ae6e044c9e6640a1bc6a" Authorization="Bea..." Content-Type="application/json; charset=utf-8" Content-Length="319" X-ARR-LOG-ID="5201b58b-c257-4599-bcda-db9ea670e249" CLIENT-IP="74.235.151.6:48128" X-SITE-DEPLOYMENT-ID="mistgo-dotnet-api" WAS-DEFAULT-HOSTNAME="mistgo-dotnet-api.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/2b5c8ea5b3e6e75c230384ee21c87c0379ec558c1758028963220" X-Client-IP="74.235.151.6" X-Client-Port="48128" >
+  <step title="DeploymentService.Deploy(id)" date="2025-09-16T13:22:46.531" >
+    <step title="DeploymentService.Create(id)" date="2025-09-16T13:22:46.552" /><!-- duration: 1177ms -->
+  </step><!-- duration: 1205ms -->
+  <step title="Outgoing response" date="2025-09-16T13:22:47.927" type="response" statusCode="200" statusText="OK" /><!-- duration: 4ms -->
+</step><!-- duration: 2081ms -->

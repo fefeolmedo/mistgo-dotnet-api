@@ -11,5 +11,10 @@ RUN dotnet publish "MistGoApi.csproj" -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
 WORKDIR /app
 EXPOSE 8080
+
+# Set environment variable for ASP.NET Core to use port 8080
+ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_ENVIRONMENT=Production
+
 COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "MistGoApi.dll"]

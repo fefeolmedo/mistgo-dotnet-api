@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+  <id>2b5c8ea5b3e6e75c230384ee21c87c0379ec558c1758028963220</id>
+  <author>fefeolmedo</author>
+  <deployer>GitHub</deployer>
+  <authorEmail />
+  <message>{"type":"Deployment","sha":"2b5c8ea5b3e6e75c230384ee21c87c0379ec558c","repoName":"fefeolmedo/mistgo-dotnet-api","actor":"fefeolmedo","slotName":"production"}</message>
+  <progress />
+  <status>Success</status>
+  <statusText />
+  <lastSuccessEndTime>2025-09-16T13:22:46.5522815Z</lastSuccessEndTime>
+  <receivedTime>2025-09-16T13:22:46.5522815Z</receivedTime>
+  <startTime>2025-09-16T13:22:46.5522815Z</startTime>
+  <endTime>2025-09-16T13:22:46.5522815Z</endTime>
+  <complete>True</complete>
+  <is_temp>False</is_temp>
+  <is_readonly>True</is_readonly>
+  <buildSummary />
+</deployment>
