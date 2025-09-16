@@ -1,0 +1,6 @@
+@MistGoApi_HostAddress = http://localhost:5273
+
+GET {{MistGoApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
